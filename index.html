@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация IP-адресов для сотрудников</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем библиотеку xlsx -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Генерация IP-адресов для сотрудников</h1>
+        <form id="employeeForm">
+            <label for="fullName">ФИО:</label>
+            <input type="text" id="fullName" required placeholder="Введите ФИО">
+
+            <label for="position">Должность:</label>
+            <input type="text" id="position" required placeholder="Введите должность">
+
+            <button type="submit">Присвоить IP</button>
+        </form>
+
+        <h2>Назначенные IP-адреса</h2>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ФИО</th>
+                    <th>Должность</th>
+                    <th>IP-адрес</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Данные будут добавляться сюда -->
+            </tbody>
+        </table>
+
+        <button id="clearBtn">Очистить данные</button>
+        <button id="downloadBtn">Скачать в Excel</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
